@@ -12,5 +12,8 @@ class Plugin
     {
         $adminAssets = new AdminAssets($this);
         $adminAssets->run();
+
+        $seoPluginMods = new Seo\SeoStructuredData();
+        $seoPluginMods->run();
     }
 }
