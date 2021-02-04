@@ -1,3 +1,4 @@
-import fn from "./doit.js"
+import './sw-classic.scss'
+import altTagEnhancements from './media/alt-tag-enhancements.js'
 
-fn()
+altTagEnhancements()
