@@ -1,22 +1,26 @@
 {
   "name": "sw-classic-plugin",
   "version": "1.0.0",
-  "main": "./assets/sw-classic.js",
   "repository": "git@github.com:wearesideways/sw-classic-plugin.git",
   "author": "Sideways",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "build": "parcel build assets/sw-classic.js",
     "start": "parcel watch assets/sw-classic.js"
   },
   "devDependencies": {
-    "jquery": "^3.5.1",
-    "lodash": "^4.17.20",
     "parcel": "^2.0.0-beta.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.32.6"
   },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
   "browserslist": [
-    ">2%"
+    "last 2 versions",
+    "> 0.5%",
+    "not IE 11",
+    "not dead"
   ]
 }

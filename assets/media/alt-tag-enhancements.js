@@ -1,8 +1,8 @@
-import $ from 'jquery'
 import forEach from 'lodash/forEach'
-import get from 'lodash/get'
 import './alt-tag.scss'
-const MEDIA_IMAGE_TYPE = 'image';
+
+const $ = window.jQuery
+const MEDIA_IMAGE_TYPE = 'image'
 
 export default function() {
   disallowSelectingImageWithoutAltTag()
@@ -10,7 +10,7 @@ export default function() {
 }
 
 function disallowSelectingImageWithoutAltTag() {
-  if (!get(wp, 'media.view.Toolbar.Select')) return
+  if (!wp?.media?.view?.Toolbar?.Select) return
 
   const SelectToolbarParent = wp.media.view.Toolbar.Select.prototype
   const { initialize, refresh } = SelectToolbarParent
@@ -47,7 +47,7 @@ function disallowSelectingImageWithoutAltTag() {
 }
 
 function provideUserFeedbackForAltTagField() {
-  if (!get(wp.media, 'view.Attachment.Details')) return
+  if (!wp?.media?.view?.Attachment?.Details) return
 
   const msgClass = 'sw-media_validation_msg'
 
@@ -78,7 +78,6 @@ function provideUserFeedbackForAltTagField() {
         if (msg.length === 0)
           $('<div>')
             .addClass(msgClass)
-            // TODO i18n
             .text('Please add a description of the image for ADA compliance')
             .appendTo(altWrapper)
       } else {
