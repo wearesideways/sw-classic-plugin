@@ -1,7 +1,7 @@
+import $ from '../jquery'
 import forEach from 'lodash/forEach'
 import './alt-tag.scss'
 
-const $ = window.jQuery
 const MEDIA_IMAGE_TYPE = 'image'
 
 export default function() {
