@@ -14,6 +14,14 @@ class SeoService {
         return the_seo_framework()->get_option( SWCLASSIC_SITE_SCHEMA_KEY, false );
     }
 
+    /**
+     * $postId param is used to fetch the schema from a specific post,
+     * if none is sent then the `get_post_meta_item` will internally use
+     * WP functions to get the current post ID
+     *
+     * @param int $postId
+     * @return string|null
+     */
     public function getPostSchemaMarkup( int $postId = 0 ): ?string {
         if ( !defined( 'THE_SEO_FRAMEWORK_PRESENT' ) || !THE_SEO_FRAMEWORK_PRESENT ) return null;
         return the_seo_framework()->get_post_meta_item( SWCLASSIC_POST_SCHEMA_KEY, $postId, false );
