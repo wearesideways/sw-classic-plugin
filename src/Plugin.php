@@ -2,6 +2,8 @@
 
 namespace Sideways\Classic;
 
+use Sideways\Classic\Users\AdminUsers;
+
 class Plugin
 {
     public string $name = 'sw-classic';
@@ -12,5 +14,8 @@ class Plugin
     {
         $adminAssets = new AdminAssets($this);
         $adminAssets->run();
+
+        $adminUsers = new AdminUsers();
+        $adminUsers->run();
     }
 }
