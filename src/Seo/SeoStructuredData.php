@@ -41,7 +41,7 @@ class SeoStructuredData
 
         add_filter( 'the_seo_framework_schema_settings_tabs', function() {
             $custom_tabs['custom_structure'] = [
-                'name'     => __( 'Custom Schema Structure', '_h' ),
+                'name'     => __( 'Custom Schema Structure', '_sc' ),
                 'callback' => Closure::fromCallable( [ $this, 'site_schema_admin_field' ] ),
                 'dashicon' => 'feedback',
             ];
