@@ -1,0 +1,26 @@
+.sw-media_validation_msg {
+  float: right;
+  color: #bc0b0b;
+}
+
+.media-sidebar,
+.attachment-details {
+  .sw-media_validation_msg {
+    width: 65%;
+  }
+
+  .setting input:invalid:not(:focus) {
+    border: 1px solid #bc0b0b;
+  }
+}
+
+.media-modal.acf-expanded {
+  .sw-media_validation_msg {
+    min-width: 77%;
+  }
+}
+
+// disable wp message on alt tags, as we have a custom one
+#alt-text-description {
+  display: none;
+}
