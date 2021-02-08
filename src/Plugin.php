@@ -2,6 +2,8 @@
 
 namespace Sideways\Classic;
 
+use Sideways\Classic\Seo\SeoStructuredData;
+
 class Plugin
 {
     public string $name = 'sw-classic';
@@ -12,5 +14,8 @@ class Plugin
     {
         $adminAssets = new AdminAssets($this);
         $adminAssets->run();
+
+        $seoPluginMods = new SeoStructuredData();
+        $seoPluginMods->run();
     }
 }
