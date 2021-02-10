@@ -62,7 +62,7 @@ class SeoStructuredData
             <div class="tsf-flex-setting-input tsf-flex">
                 <textarea class="large-text" name="autodescription[_schema_markup]"
                           id="autodescription_schema" rows="10" cols="4"
-                          autocomplete=off><?php echo esc_textarea($this->seo_service->get_post_schema_markup()) ?></textarea>
+                          autocomplete=off><?php echo esc_textarea($this->seo_service->getPostSchemaMarkup()) ?></textarea>
             </div>
         </div>
         <?php
@@ -76,7 +76,7 @@ class SeoStructuredData
             </label>
             <textarea name="autodescription-site-settings[<?php echo esc_attr(SWCLASSIC_SITE_SCHEMA_KEY) ?>]"
                       class="large-text" id="<?php echo esc_attr(SWCLASSIC_SITE_SCHEMA_KEY) ?>" rows="10" cols="4"
-                      autocomplete=off><?php echo esc_textarea($this->seo_service->get_site_schema_markup()) ?></textarea>
+                      autocomplete=off><?php echo esc_textarea($this->seo_service->getSiteSchemaMarkup()) ?></textarea>
         </p>
         <?php
     }
