@@ -14,7 +14,7 @@ class SeoStructuredData
 
     public function run(): void {
         // Filters for Plugin Metabox on Posts/Pages
-        add_filter( 'the_seo_framework_inpost_seo_save_defaults', static function( $defaults ) {
+        add_filter( 'the_seo_framework_post_meta_defaults', static function( $defaults ) {
             $defaults[SWCLASSIC_POST_SCHEMA_KEY] = '';
             return $defaults;
         } );
